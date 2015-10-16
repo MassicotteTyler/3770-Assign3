@@ -1,4 +1,4 @@
-
+//Tyler Massicotte 3B A00855150
 
 /*********************************************************************
 Comp3770 Assignment#3 (Max 10 marks).
@@ -79,7 +79,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	static HWND	hwnd;
 	MSG		msg;
 	WNDCLASS wndclass;
-
+	HMENU menu = LoadMenu(hInstance, MAKEINTRESOURCE(IDR_MENU1));
 
 	wndclass.style = CS_HREDRAW | CS_VREDRAW;
 	wndclass.lpfnWndProc = HelloWndProc;
@@ -100,14 +100,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	}
 
 	hwnd = CreateWindow(szAppName,
-		TEXT("Quiz 3"),
+		TEXT("Tyler Massicotte 3B"),
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT,
 		CW_USEDEFAULT,
 		800,
 		600,
 		NULL,
-		NULL,
+		menu,
 		hInstance,
 		NULL);
 	ShowWindow(hwnd, iCmdShow);
